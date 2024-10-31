@@ -2,6 +2,7 @@ require("nvim-treesitter.configs").setup {
 	ensure_installed = {
 		"rust",
 		"lua",
+    "go",
 	},
   	auto_install = true,
   	sync_install = true,

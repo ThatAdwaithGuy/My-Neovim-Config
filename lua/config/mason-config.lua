@@ -20,7 +20,8 @@
       -- list of servers for mason to install
       ensure_installed = {
         "lua_ls",
-        "rust-analyzer",
+        "rust_analyzer",
+        "gopls",
       },
     })
 

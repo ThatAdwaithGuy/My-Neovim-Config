@@ -1,10 +1,17 @@
 local lspconfig = require('lspconfig')
+
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
     ['rust-analyzer'] = {},
   },
 }
+
+
+
+
+
+lspconfig.gopls.setup {}
 
     local mason_lspconfig = require("mason-lspconfig")
 
@@ -73,26 +80,25 @@ lspconfig.rust_analyzer.setup {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-  
 mason_lspconfig.setup_handlers({
 
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
+   ["lua_ls"] = function()
+     -- configure lua server (with special settings)
+     lspconfig["lua_ls"].setup({
+       capabilities = capabilities,
+       settings = {
+         Lua = {
+           -- make the language server recognize "vim" global
+           diagnostics = {
+             globals = { "vim" },
+           },
+           completion = {
+             callSnippet = "Replace",
+           },
+         },
+       },
+     })
+   end,
 
 })
 
