@@ -5,7 +5,7 @@ custom_onedark.normal.a = '#1e1e2e'
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'onedarkpro',
+    theme = 'gruvbox',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {

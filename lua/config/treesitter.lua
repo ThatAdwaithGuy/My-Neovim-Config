@@ -1,7 +1,11 @@
 require("nvim-treesitter.configs").setup {
+  TSConfig = {},
+  modules = {},
+ ignore_install = {},
 	ensure_installed = {
 		"rust",
 		"lua",
+    "toml",
     "go",
 	},
   	auto_install = true,

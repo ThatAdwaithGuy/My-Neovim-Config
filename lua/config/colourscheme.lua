@@ -52,15 +52,6 @@ require("catppuccin").setup({
     }
 })
 
--- setup must be called before loading
---vim.cmd.colorscheme "catppuccin"
-
---vim.cmd("colorscheme catppuccin")
-
-
-
-vim.cmd("colorscheme onedark_dark")
-
 -- Default options:
 require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
@@ -86,3 +77,5 @@ require("gruvbox").setup({
   dim_inactive = false,
   transparent_mode = false,
 })
+vim.cmd("colorscheme gruvbox")
+

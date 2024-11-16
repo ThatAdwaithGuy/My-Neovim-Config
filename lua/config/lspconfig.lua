@@ -7,18 +7,21 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 
 
 
+
+for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+  vim.api.nvim_set_hl(0, group, {})
+end
 
 lspconfig.gopls.setup {}
-
-    local mason_lspconfig = require("mason-lspconfig")
+local mason_lspconfig = require("mason-lspconfig")
 
     -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-    local keymap = vim.keymap -- for conciseness
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+local keymap = vim.keymap -- for conciseness
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
