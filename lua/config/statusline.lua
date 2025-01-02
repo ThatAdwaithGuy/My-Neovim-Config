@@ -1,7 +1,5 @@
-local custom_onedark = require("lualine.themes.onedark")
-custom_onedark.normal.a = '#1e1e2e'
-
-
+vim.api.nvim_set_hl(0, "StatusLine", {reverse = false})
+vim.api.nvim_set_hl(0, "StatusLineNC", {reverse = false})
 require('lualine').setup {
   options = {
     icons_enabled = true,
