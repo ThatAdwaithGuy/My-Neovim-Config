@@ -1,4 +1,5 @@
 require("config.lazy")
+require("config.ibl")
 require("config.lspconfig")
 require("config.telescope")
 require("config.auto-pair")
